@@ -7,8 +7,8 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-const PORT = 5000;
-const SECRET_KEY = 'eVotingSecretKey';
+const PORT = process.env.PORT || 5000;
+const SECRET_KEY = process.env.SECRET_KEY || 'eVotingSecretKey';
 
 // Simulasi database
 let users = [
@@ -77,5 +77,5 @@ app.get('/results', authenticateToken, (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server berjalan di http://localhost:${PORT}`);
+  console.log(`Server berjalan di port ${PORT}`);
 });
