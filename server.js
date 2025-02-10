@@ -4,7 +4,8 @@ const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
 
 const app = express();
-app.use(cors());
+//app.use(cors());
+app.use(cors({ origin: '*' }));
 app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 5000;
