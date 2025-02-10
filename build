@@ -1,0 +1,9 @@
+npm init -y
+npm install express cors body-parser jsonwebtoken
+node server.js
+
+npx create-react-app e-voting-client
+cd e-voting-client
+npm install axios
+
+npm start
