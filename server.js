@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 5000;
 const SECRET_KEY = process.env.SECRET_KEY || 'eVotingSecretKey';
-
+console.log(SECRET_KEY);
 // Simulasi database
 let users = [
   { id: 1, username: 'user1', password: 'password1', hasVoted: false },
