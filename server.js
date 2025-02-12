@@ -4,13 +4,10 @@ const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
 
 const app = express();
-//app.use(cors());
 app.use(cors({ origin: '*' }));
 app.use(bodyParser.json());
 
-//const PORT = process.env.PORT || 5000;
 const PORT = process.env.PORT;
-//const SECRET_KEY = process.env.SECRET_KEY || 'eVotingSecretKey';
 const SECRET_KEY = process.env.SECRET_KEY;
 
 // Simulasi database
